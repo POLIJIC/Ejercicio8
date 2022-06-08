@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="cantidad" type="atributocantidad"> </xs:element>
+    <xs:complexType name="atributocantidad">
+        <xs:simpleContent>
+            <xs:extension base="xs:float">
+                <xs:attribute name="divisa" type="listdivisa"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:simpleType name="listdivisa">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="dolar"/>
+            <xs:enumeration value="cop"/>
+            <xs:enumeration value="euro"/>
+            <xs:enumeration value="libra"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
